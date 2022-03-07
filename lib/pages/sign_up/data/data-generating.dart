@@ -10,43 +10,34 @@ class DataGenerating extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 22),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 125 * Style.ratioV!),
+                  padding: EdgeInsets.only(top: 85 * Style.ratioV!),
                   child: Image(
-                    image: AssetImage('images/charts.png'),
-                    height: 200 * Style.ratioV!,
+                    image: AssetImage('images/money_person.png'),
+                    width: Style.screenWidth,
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 65 * Style.ratioV!),
+                  padding: EdgeInsets.only(top: 35 * Style.ratioV!, left: 30, right: 30),
                   child: Text(
-                    'Your account is connected!',
-                    textAlign: TextAlign.center,
-                    style: Style.h2,
+                    'Your account is connected!\nStrike Acceptance will get back to you shortly.',
+                    textAlign: TextAlign.left,
+                    style: Style.h2!.copyWith(height: 1.5),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 25 * Style.ratioV!, bottom: 15 * Style.ratioV!),
+                  padding: EdgeInsets.only(top: 25 * Style.ratioV!, bottom: 15 * Style.ratioV!, left: 30, right: 30),
                   child: Text(
-                    'We\'ve begun generating your report for Strike Acceptance and will notify you via email when it\'s sent.',
-                    textAlign: TextAlign.center,
+                    'We noticed that your income is more volatile than average. Belay protects your pay on slow days - if you\'re interested, try us out for a 1 week free trial!',
+                    textAlign: TextAlign.left,
                     style: Style.p1,
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 55 * Style.ratioV!, bottom: 15 * Style.ratioV!),
-                  child: Text(
-                    'Do you stress over slow days driving Uber?',
-                    textAlign: TextAlign.center,
-                    style: Style.h4,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 10 * Style.ratioV!),
+                  padding: EdgeInsets.only(top: 40 * Style.ratioV!, left: 30, right: 30),
                   child: ElevatedButton(
                     child: Text(
                       'Try Belay pay protection for free',

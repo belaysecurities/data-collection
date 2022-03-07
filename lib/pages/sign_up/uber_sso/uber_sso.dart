@@ -20,7 +20,7 @@ class UberSSO extends StatelessWidget {
   Widget build(BuildContext context) {
     return SinglePageInput(
       headerText: 'Connect with Uber',
-      info: 'Securely connect your Uber account.',
+      info: 'Securely connect your Uber account to verify your rideshare income.',
       handleBack: () => Navigator.pop(context),
       form: UberSSOForm(
         handleContinue: onContinue,

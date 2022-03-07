@@ -23,7 +23,7 @@ class Landing extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                      top: 140 * Style.ratioV!,
+                      top: 170 * Style.ratioV!,
                     ),
                     child: Image(
                       image: AssetImage('images/logo_white.png'),
@@ -39,12 +39,12 @@ class Landing extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Take control of your income',
+                    'Your ticket to first-class economic citizenship',
                     textAlign: TextAlign.center,
                     style: Style.h4!.copyWith(color: Color(0xFFE1e1e1)),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 80 * Style.ratioV!),
+                    padding: EdgeInsets.only(top: 50 * Style.ratioV!),
                     child: ElevatedButton(
                       style: Style.btn3,
                       child: Row(
@@ -58,7 +58,7 @@ class Landing extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Connect with Uber',
+                            'Verify income with Uber',
                             style: Style.h2!.copyWith(fontSize: 14),
                           ),
                         ],
@@ -83,35 +83,18 @@ class Landing extends StatelessWidget {
             Transform.translate(
               offset: Offset(0, -0.5),
               child: Container(
-                height: 120 * Style.ratioV!,
+                height: 80 * Style.ratioV!,
                 decoration: new BoxDecoration(
                   color: Style.purple,
                   borderRadius: BorderRadius.vertical(
                     bottom: new Radius.elliptical(Style.screenWidth! * 2, 100.0),
                   ),
                 ),
-                child: TextButton(
-                  child: Text(
-                    'Have an account? Log in',
-                    style: Style.p1!.copyWith(
-                      color: Color(0xFFe1e1e1),
-                      fontSize: 14,
-                    ),
-                  ),
-                  onPressed: () {
-                    Analytics.trackUberSignInClicked();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => UberSSO(isSignup: false, onContinue: onContinue),
-                      ),
-                    );
-                  },
-                ),
+                child: Container(),
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 30 * Style.ratioV!, bottom: 20),
+              padding: EdgeInsets.only(top: 60 * Style.ratioV!, bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
