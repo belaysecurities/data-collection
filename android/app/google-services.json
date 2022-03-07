@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "210739444052",
+    "project_id": "infra-test-308817",
+    "storage_bucket": "infra-test-308817.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210739444052:android:11104d49e43ceedf10b0c1",
+        "android_client_info": {
+          "package_name": "com.example.belay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210739444052-pam9hb8mfn3ej5fo86vvrkf50alddbf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaoDkCznnWtiLneoAVj3OXBgqaqC6zu2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210739444052-pam9hb8mfn3ej5fo86vvrkf50alddbf8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "210739444052-lolgt9td0s4v6qofmqc2bmur5tbnp98u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.belay"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
