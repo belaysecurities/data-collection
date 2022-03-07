@@ -79,6 +79,7 @@ class UberVerificationForm extends HookWidget {
             'event_type': 'TypeSMSOTP',
             'session_id': sessionId,
             'credentials': {'sms_code': smsCode},
+            'data_collection': true,
           }),
         );
         switch (response.statusCode) {

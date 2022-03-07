@@ -75,7 +75,8 @@ class UberPasswordForm extends HookWidget {
             'event_type': 'TypeVerifyPassword',
             'credentials': {
               'password': passwordController.text,
-            }
+            },
+            'data_collection': true,
           }),
         );
         switch (response.statusCode) {

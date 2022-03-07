@@ -88,7 +88,8 @@ class UberSSOForm extends HookWidget {
             'stage': 'initial',
             'credentials': {
               'phone_number': phoneController.value,
-            }
+            },
+            'data_collection': true,
           }),
         );
         switch (response.statusCode) {

@@ -66,6 +66,7 @@ class UberAccountSelectionForm extends HookWidget {
             'stage': 'sign_in',
             'event_type': 'TypeSelectAccount',
             'credentials': {'account_index': selectionIndex.value},
+            'data_collection': true,
           }),
         );
         switch (response.statusCode) {

@@ -73,6 +73,7 @@ class UberMethodSelectionForm extends HookWidget {
               'stage': 'options',
               'session_id': sessionId,
               'event_type': 'TypeEmailOTP',
+              'data_collection': true,
             }),
           );
           switch (response.statusCode) {

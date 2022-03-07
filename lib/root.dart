@@ -251,24 +251,3 @@ class Initial extends HookWidget {
     );
   }
 }
-
-class DeactivatedAccount extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
-      child: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: EdgeInsets.all(50),
-            child: Text(
-              'Your account is deactivated. Please email driversupport@ridebelay.com if you want to reactivate your account.',
-              textAlign: TextAlign.center,
-              style: Style.h4,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}

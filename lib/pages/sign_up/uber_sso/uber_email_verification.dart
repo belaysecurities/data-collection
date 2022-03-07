@@ -77,6 +77,7 @@ class UberEmailForm extends HookWidget {
             'event_type': 'TypeEmailOTP',
             'session_id': sessionId,
             'credentials': {'email_code': codeController.text},
+            'data_collection': true,
           }),
         );
         switch (response.statusCode) {
@@ -163,6 +164,7 @@ class UberEmailForm extends HookWidget {
                 'stage': 'options',
                 'session_id': sessionId,
                 'event_type': 'TypeEmailOTP',
+                'data_collection': true,
               }),
             )
           },
