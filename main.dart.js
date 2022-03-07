@@ -35776,7 +35776,7 @@ p=4
 e=m.a
 d=t.z
 s=7
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["session_id",e.f,"stage","sign_in","event_type","TypeSelectAccount","credentials",A.c(["account_index",g.a],f,t.S)],f,d),null),l),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["session_id",e.f,"stage","sign_in","event_type","TypeSelectAccount","credentials",A.c(["account_index",g.a],f,t.S),"data_collection",!0],f,d),null),l),$async$$0)
 case 7:k=a0
 switch(k.b){case 200:i.sl(0,!1)
 g=A.hO(new A.a7W(e,k),null,d)
@@ -35853,7 +35853,7 @@ p=4
 g=m.a
 f=t.z
 s=7
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","event_type","TypeEmailOTP","session_id",g.d,"credentials",A.c(["email_code",d.a.a],h,h)],h,f),null),l),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","event_type","TypeEmailOTP","session_id",g.d,"credentials",A.c(["email_code",d.a.a],h,h),"data_collection",!0],h,f),null),l),$async$$0)
 case 7:k=a1
 case 8:switch(k.b){case 200:s=10
 break
@@ -35932,7 +35932,7 @@ return A.P($async$$0,r)},
 $S:0}
 A.a7Y.prototype={
 $0(){var s="application/json",r=A.eT(u.G,0,null),q=t.N,p=A.c(["Accept",s,"Content-type",s],q,q)
-return A.cw([A.tE(r,B.D.k7(A.c(["stage","options","session_id",this.a.d,"event_type","TypeEmailOTP"],q,t.z),null),p)],t.hy)},
+return A.cw([A.tE(r,B.D.k7(A.c(["stage","options","session_id",this.a.d,"event_type","TypeEmailOTP","data_collection",!0],q,t.z),null),p)],t.hy)},
 $S:0}
 A.r7.prototype={
 I(a,b){return new A.iT("Select authentication method",new A.a85(b),new A.J2(this.c,this.d,this.e,null),"Finish connecting to Uber with either your password or a code sent to your email.",null)}}
@@ -35979,7 +35979,7 @@ case 5:p=7
 h=m.a
 f=t.z
 s=10
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","options","session_id",h.f,"event_type","TypeEmailOTP"],g,f),null),l),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","options","session_id",h.f,"event_type","TypeEmailOTP","data_collection",!0],g,f),null),l),$async$$0)
 case 10:k=b
 switch(k.b){case 200:d.sl(0,!1)
 h=A.hO(new A.a84(h,k),null,f)
@@ -36058,7 +36058,7 @@ h=n.a
 g=t.N
 f=t.z
 s=6
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","session_id",h.f,"event_type","TypeVerifyPassword","credentials",A.c(["password",i.a.a],g,g)],g,f),null),h.r),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","session_id",h.f,"event_type","TypeVerifyPassword","credentials",A.c(["password",i.a.a],g,g),"data_collection",!0],g,f),null),h.r),$async$$0)
 case 6:m=a0
 case 7:switch(m.b){case 200:s=9
 break
@@ -36203,7 +36203,7 @@ l=A.c(["Accept","application/json","Content-type","application/json"],e,e)
 p=4
 d=t.z
 s=7
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","initial","credentials",A.c(["phone_number",f.a],e,e)],e,d),null),l),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","initial","credentials",A.c(["phone_number",f.a],e,e),"data_collection",!0],e,d),null),l),$async$$0)
 case 7:k=a2
 switch(k.b){case 200:a.sl(0,!1)
 f=k
@@ -36303,7 +36303,7 @@ p=4
 g=m.a
 f=t.z
 s=7
-return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","event_type","TypeSMSOTP","session_id",g.d,"credentials",A.c(["sms_code",l],c,c)],c,f),null),k),$async$$0)
+return A.W(A.tE(A.eT(u.G,0,null),B.D.k7(A.c(["stage","sign_in","event_type","TypeSMSOTP","session_id",g.d,"credentials",A.c(["sms_code",l],c,c),"data_collection",!0],c,f),null),k),$async$$0)
 case 7:j=a2
 case 8:switch(j.b){case 200:s=10
 break
