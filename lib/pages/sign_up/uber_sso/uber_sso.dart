@@ -1,10 +1,13 @@
 import 'package:belay/components/single_page_input.dart';
 import 'package:belay/pages/sign_up/manual_login.dart';
 import 'package:belay/pages/sign_up/uber_sso/uber_account_selection.dart';
+import 'package:belay/pages/sign_up/uber_sso/uber_method_selection.dart';
 import 'package:belay/utils/analytics.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:provider/provider.dart';
+import '../../../root.dart';
 import 'uber_verification.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:http/http.dart' as http;
@@ -37,7 +40,7 @@ class UberSSOForm extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final phoneController = useState('');
-
+    final notifier = Provider.of<ValueNotifier<UserWrapper>>(context, listen: true);
     final isSubmitting = useState(false);
     final error = useState('');
     final accepted = useState(isSignup ? false : true);
@@ -112,16 +115,41 @@ class UberSSOForm extends HookWidget {
                   ),
                 );
               } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => UberVerification(
-                      sessionId: body['session_id'],
-                      handleContinue: handleContinue,
-                      isSignup: isSignup,
+                if (body.containsKey('stage') && body['stage'] == 'options') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UberMethodSelection(
+                        sessionId: jsonDecode(response.body)['session_id'],
+                        onContinue: handleContinue,
+                        isSignup: isSignup,
+                      ),
                     ),
-                  ),
-                );
+                  );
+                } else if (body.containsKey('stage') && body['stage'] == 'finished') {
+                  try {
+                    await auth.signInWithCustomToken(jsonDecode((response.body))['user_token']);
+                  } catch (ex) {
+                    print('Debug: ' + ex.toString());
+                    await auth.signInWithCustomToken(jsonDecode((response.body))['user_token']);
+                  }
+                  while (notifier.value.user == null) {
+                    await Future.delayed(Duration(milliseconds: 100));
+                  }
+
+                  handleContinue();
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UberVerification(
+                        sessionId: body['session_id'],
+                        handleContinue: handleContinue,
+                        isSignup: isSignup,
+                      ),
+                    ),
+                  );
+                }
               }
             }
             break;
